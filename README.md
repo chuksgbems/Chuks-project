@@ -52,7 +52,8 @@ The program will generate a random password and print it to the console.
 4. The password is generated.
 5. The password is printed to the console.**
 
-TIC-Tac-Toe Game 
+##TIC-Tac-Toe Game 
+
 The code is for a tic-tac-toe game.
 
 The game is played on a 3x3 board. The players take turns marking a square on the board with either an X or an O. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins.
