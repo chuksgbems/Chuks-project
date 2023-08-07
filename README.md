@@ -52,7 +52,7 @@ The program will generate a random password and print it to the console.
 4. The password is generated.
 5. The password is printed to the console.**
 
-##TIC-Tac-Toe Game 
+## Tictac toe game
 
 The code is for a tic-tac-toe game.
 
