@@ -51,3 +51,20 @@ The program will generate a random password and print it to the console.
 3. The set of characters to choose from is defined.
 4. The password is generated.
 5. The password is printed to the console.**
+
+TIC-Tac-Toe Game 
+The code is for a tic-tac-toe game.
+
+The game is played on a 3x3 board. The players take turns marking a square on the board with either an X or an O. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins.
+
+The code starts by importing the <iostream> and <stdlib.h> libraries. The <iostream> library provides the necessary functions for input and output, and the <stdlib.h> library provides the function rand(), which is used to generate random numbers.
+
+The next step is to declare the variables that will be used in the game. The board is represented by a 3x3 array of characters. The variable choice is used to store the player's choice of square to mark. The variables row and column are used to store the row and column of the square that the player has chosen. The variable turn is used to keep track of which player's turn it is. The variable draw is used to keep track of whether the game is a draw.
+
+The next function is the display_board() function. This function prints the current state of the board to the console.
+
+The player_turn() function gets the player's input and updates the board. The function first checks to see if it is the player's turn. If it is, the function prints a message asking the player to choose a square. The function then gets the player's choice and updates the board accordingly. If the player's choice is invalid, the function prints an error message and asks the player to choose again.
+
+The gameover() function checks to see if the game is over. The function first checks to see if either player has won by getting three of their marks in a row. The function then checks to see if the game is a draw by checking if all of the squares on the board are filled.
+
+The main() function is the program's entry point. The function first prints a welcome message and then starts the game loop. The game loop continues until the game is over. In each iteration of the loop, the function displays the board, gets the player's input, and updates the board. The function then checks to see if the game is over and prints the appropriate message if it is.
