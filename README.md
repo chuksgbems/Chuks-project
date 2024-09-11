@@ -52,3 +52,100 @@ The program will generate a random password and print it to the console.
 4. The password is generated.
 5. The password is printed to the console.**
 
+# playstation power on automation script
+
+This project allows you to remotely turn on your PlayStation console using a Python script by sending a Wake-on-LAN (WoL) magic packet. The script is fully automated and logs all actions, making it easy to track its operations and troubleshoot issues.
+
+Features
+
+Automates turning on your PlayStation console via Wake-on-LAN.
+Validates the MAC address format before sending the magic packet.
+Provides detailed logging for tracking events and errors.
+Uses exception handling for better error management.
+Requirements
+
+Before you can use this script, ensure that your environment meets the following requirements:
+
+Python 3.6+
+wakeonlan library: You can install this via pip.
+PlayStation in Rest Mode with network access enabled.
+Setup Instructions
+
+Follow these steps to set up and use the automation script:
+
+1. Clone the Repository
+First, clone this repository to your local machine:
+
+bash
+git clone https://github.com/yourusername/ps-automation.git
+cd ps-automation
+2. Install Required Python Libraries
+The script requires the wakeonlan library to send the magic packet. You can install it using pip:
+
+bash
+
+pip install wakeonlan
+3. Configure PlayStation Settings
+Make sure your PlayStation is set to allow network wakeup. Follow these steps on your PlayStation:
+
+Go to Settings > Power Saving Settings > Set Features Available in Rest Mode.
+Enable Stay Connected to the Internet.
+Enable Turning On PS4/PS5 from Network.
+4. Find Your PlayStation's MAC Address
+You will need your PlayStation’s MAC address to send the magic packet. Follow these steps:
+
+Go to Settings > Network > View Connection Status.
+Note down the MAC address (e.g., XX:XX:XX:XX:XX:XX).
+5. Update the Script with Your PlayStation’s MAC Address
+Open the Python script (ps_automation.py) and update the MAC address in the code:
+
+python
+
+PS_MAC_ADDRESS = 'XX:XX:XX:XX:XX:XX'  # Replace with your PlayStation's MAC address
+6. Running the Script
+To turn on your PlayStation, run the following command in your terminal:
+
+bash
+
+python ps_automation.py
+If everything is configured correctly, the script will send a magic packet to wake up your PlayStation.
+
+7. Logging
+The script generates a log file (ps_automation.log) in the same directory, which tracks the script's execution. This log file will record the following:
+
+The time the script was run.
+Whether the MAC address is valid.
+If the magic packet was successfully sent.
+Any errors encountered during execution.
+8. Schedule the Script (Optional)
+You can automate the script to run at specific times or trigger it through other systems (e.g., Home Automation):
+
+On Linux/macOS: Use a cron job to schedule it.
+On Windows: Use Task Scheduler to automate the script's execution.
+Example cron job to run the script at 8:00 AM daily:
+bash
+
+0 8 * * * /usr/bin/python3 /path_to_script/ps_automation.py
+Example Log Output
+
+Here’s an example of what you’ll find in the ps_automation.log file:
+
+ruby
+
+2024-09-11 14:35:10 - INFO - PlayStation automation script started.
+2024-09-11 14:35:10 - INFO - MAC address XX:XX:XX:XX:XX:XX is valid.
+2024-09-11 14:35:10 - INFO - Attempting to send a magic packet to turn on the PlayStation.
+2024-09-11 14:35:10 - INFO - Magic packet successfully sent to MAC address: XX:XX:XX:XX:XX:XX
+2024-09-11 14:35:10 - INFO - PlayStation automation script finished.
+Troubleshooting
+
+Invalid MAC Address Error: Ensure that you have entered your PlayStation’s MAC address correctly in the format XX:XX:XX:XX:XX:XX.
+PlayStation Not Turning On: Verify that your PlayStation is in Rest Mode and that the network settings are configured properly.
+No Log Output: Check if the script has permission to write files in the directory.
+Future Improvements
+
+Add support for additional devices beyond PlayStation.
+Integrate with home automation systems like Alexa or Google Assistant for voice control.
+Allow for remote execution via a secure connection (VPN or other methods).
+
+
